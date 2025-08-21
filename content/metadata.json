@@ -1,7 +1,9 @@
 {
-  "version": "1.1.0",
-  "lastUpdated": "2025-08-21T20:00:00Z",
-  "minAppVersion": "2.0.0",
+  "version": "2.1.0",
+  "lastUpdated": "2025-08-21T21:00:00Z",
+  "minAppVersion": "1.0.0",
+  "updateAvailable": true,
+  
   "contentPacks": {
     "seasonal_winter_2025": {
       "id": "seasonal_winter_2025",
@@ -23,12 +25,13 @@
         "winter_special": {
           "id": "winter_special",
           "file": "winter_special.json",
-          "size": 8924
+          "size": 8924,
+          "unlockConditions": []
         }
       }
     },
     "transport_autobahn": {
-      "id": "transport_autobahn",
+      "id": "transport_autobahn", 
       "name": {
         "de": "Autobahn-Edition",
         "en": "Highway Edition"
@@ -44,8 +47,35 @@
       "editions": {
         "autobahn": {
           "id": "autobahn",
-          "file": "autobahn.json",
-          "size": 6496
+          "file": "autobahn.json", 
+          "size": 6496,
+          "unlockConditions": []
+        }
+      }
+    },
+    "geographical_fluss": {
+      "id": "geographical_fluss",
+      "name": {
+        "de": "Fluss-Edition",
+        "en": "River Edition"
+      },
+      "description": {
+        "de": "Deutsche Flüsse und Raststätten", 
+        "en": "German Rivers and rest stops"
+      },
+      "type": "geographical",
+      "free": true,
+      "available": true,
+      "unlockConditions": [
+        {"type": "score", "score": 50}
+      ],
+      "downloadSize": 12340,
+      "editions": {
+        "fluss": {
+          "id": "fluss",
+          "file": "fluss.json",
+          "size": 6496,
+          "unlockConditions": [{"type": "score", "score": 50}]
         }
       }
     },
@@ -62,31 +92,34 @@
       "type": "premium",
       "free": false,
       "price": 1.99,
-      "currency": "EUR",
+      "currency": "EUR", 
       "available": true,
       "downloadSize": 18750,
       "editions": {
         "luxury": {
           "id": "luxury",
           "file": "luxury.json",
-          "size": 9875
+          "size": 9875,
+          "unlockConditions": [{"type": "premium"}]
         }
       }
     }
   },
+  
   "newContent": {
     "title": {
-      "de": "Winter-Edition verfügbar!",
-      "en": "Winter Edition available!"
+      "de": "Neue Editionen verfügbar! 🎉",
+      "en": "New Editions available! 🎉"
     },
     "description": {
-      "de": "Weihnachtsmärkte und Skigebiete jetzt spielbar!",
-      "en": "Christmas markets and ski resorts now playable!"
+      "de": "Winter, Autobahn, Fluss und Luxus-Editionen jetzt spielbar!",
+      "en": "Winter, Highway, River and Luxury editions now playable!"
     },
-    "icon": "❄️"
+    "icon": "🎯"
   },
+  
   "serverInfo": {
-    "version": "1.1.0",
+    "version": "2.1.0",
     "supportedAppVersions": ["2.0.0", "2.1.0"],
     "regions": ["de", "at", "ch"],
     "languages": ["de", "en"]

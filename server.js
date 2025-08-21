@@ -1,5 +1,5 @@
-// Content Server - Backend für Klo-Kollektor
-// server.js
+// FIXED: Dynamischer Content Server - server.js
+// Lädt echte JSON-Dateien statt hardcoded Content
 
 const express = require('express');
 const cors = require('cors');
@@ -18,221 +18,229 @@ app.use(express.json());
 // Content-Verzeichnis
 const CONTENT_DIR = path.join(__dirname, 'content');
 const METADATA_FILE = path.join(CONTENT_DIR, 'metadata.json');
+const EDITIONS_DIR = path.join(CONTENT_DIR, 'editions');
 
 // Stelle sicher, dass Content-Verzeichnis existiert
 async function ensureContentDir() {
     try {
         await fs.access(CONTENT_DIR);
+        await fs.access(EDITIONS_DIR);
     } catch {
         await fs.mkdir(CONTENT_DIR, { recursive: true });
+        await fs.mkdir(EDITIONS_DIR, { recursive: true });
     }
 }
 
-// Lade Metadaten
+// 🔥 FIXED: Lade ECHTE Metadaten aus metadata.json
 async function loadMetadata() {
     try {
+        console.log('📖 Lade Metadaten aus:', METADATA_FILE);
         const data = await fs.readFile(METADATA_FILE, 'utf8');
-        return JSON.parse(data);
-    } catch {
+        const metadata = JSON.parse(data);
+        console.log('✅ Metadaten geladen:', metadata.version);
+        return metadata;
+    } catch (error) {
+        console.error('❌ Fehler beim Laden der Metadaten:', error.message);
         console.log('📁 Fallback Metadaten werden verwendet');
         return {
-            version: "1.1.0",
+            version: "1.0.0",
             lastUpdated: new Date().toISOString(),
-            updateAvailable: true,
+            updateAvailable: false,
             newContent: {
-                title: {
-                    de: "Neue Winter-Edition verfügbar!",
-                    en: "New Winter Edition available!"
-                },
-                description: {
-                    de: "Weihnachtsmärkte und Skigebiete jetzt spielbar!",
-                    en: "Christmas markets and ski resorts now playable!"
-                },
-                icon: "❄️"
-            }
+                title: { de: "Fallback Content", en: "Fallback Content" },
+                description: { de: "Keine aktuellen Daten verfügbar", en: "No current data available" },
+                icon: "⚠️"
+            },
+            contentPacks: {}
         };
+    }
+}
+
+// 🔥 FIXED: Lade ECHTE Edition aus JSON-Datei
+async function loadEdition(editionId) {
+    try {
+        const editionFile = path.join(EDITIONS_DIR, `${editionId}.json`);
+        console.log('📖 Lade Edition aus:', editionFile);
+        
+        const data = await fs.readFile(editionFile, 'utf8');
+        const edition = JSON.parse(data);
+        console.log(`✅ Edition ${editionId} geladen:`, edition.name?.de || edition.name);
+        return edition;
+    } catch (error) {
+        console.error(`❌ Edition ${editionId} nicht gefunden:`, error.message);
+        return null;
+    }
+}
+
+// 🔥 FIXED: Liste alle verfügbaren Editionen auf
+async function listAvailableEditions() {
+    try {
+        const files = await fs.readdir(EDITIONS_DIR);
+        const editionFiles = files.filter(file => file.endsWith('.json'));
+        console.log('📁 Verfügbare Edition-Dateien:', editionFiles);
+        return editionFiles.map(file => file.replace('.json', ''));
+    } catch (error) {
+        console.error('❌ Fehler beim Auflisten der Editionen:', error.message);
+        return [];
     }
 }
 
 // Routes
 
-// Update-Check - HAUPTROUTE
+// 🔥 FIXED: Update-Check - lädt ECHTE Daten
 app.get('/content/check-updates', async (req, res) => {
     try {
         console.log('🔍 Update-Check Request erhalten von:', req.get('User-Agent'));
         
+        // Lade ECHTE Metadaten aus JSON-Datei
+        const metadata = await loadMetadata();
+        
+        // Erweitere um Server-Info
         const response = {
-            version: "1.1.0",
-            lastUpdated: new Date().toISOString(),
-            updateAvailable: true,
-            newContent: {
-                title: {
-                    de: "Neue Winter-Edition verfügbar!",
-                    en: "New Winter Edition available!"
-                },
-                description: {
-                    de: "Weihnachtsmärkte und Skigebiete jetzt spielbar!",
-                    en: "Christmas markets and ski resorts now playable!"
-                },
-                icon: "❄️"
-            },
-            editions: {
-                winter_special: {
-                    id: 'winter_special',
-                    name: 'Winter Special 2025',
-                    icon: '❄️',
-                    color: '#74b9ff',
-                    type: 'seasonal',
-                    free: true,
-                    available: true,
-                    locations: [
-                        {
-                            id: 'weihnachtsmarkt_koeln',
-                            name: {de: 'Kölner Weihnachtsmarkt', en: 'Cologne Christmas Market'},
-                            flag: '🎄',
-                            type: {de: 'Weihnachtsmarkt', en: 'Christmas Market'},
-                            bonus: 50
-                        },
-                        {
-                            id: 'skigebiet_alpen',
-                            name: {de: 'Alpen Skigebiet', en: 'Alpine Ski Resort'},
-                            flag: '⛷️',
-                            type: {de: 'Skigebiet', en: 'Ski Resort'},
-                            bonus: 100
-                        }
-                    ]
-                },
-                autobahn: {
-                    id: 'autobahn',
-                    name: 'Autobahn-Edition',
-                    icon: '🛣️',
-                    color: '#636e72',
-                    type: 'transport',
-                    free: true,
-                    locations: [
-                        {
-                            id: 'raststaette_a1',
-                            name: {de: 'Raststätte A1 Nord', en: 'A1 North Rest Stop'},
-                            flag: '🚗',
-                            type: {de: 'Raststätte', en: 'Rest Stop'}
-                        }
-                    ]
-                }
-            }
+            ...metadata,
+            timestamp: new Date().toISOString(),
+            serverVersion: "2.0.0",
+            availableEditions: await listAvailableEditions()
         };
         
-        console.log('📦 Sende Update-Response:', response);
+        console.log('📦 Sende ECHTE Update-Response:', {
+            version: response.version,
+            contentPacks: Object.keys(response.contentPacks || {}),
+            updateAvailable: response.updateAvailable
+        });
+        
         res.json(response);
         
     } catch (error) {
         console.error('❌ Update-Check Error:', error);
-        res.status(500).json({ error: 'Server error' });
+        res.status(500).json({ error: 'Server error', details: error.message });
     }
 });
 
-// Einzelne Edition laden
+// 🔥 FIXED: Einzelne Edition laden - aus JSON-Datei
 app.get('/content/edition/:editionId', async (req, res) => {
     try {
         const { editionId } = req.params;
         console.log(`📥 Edition angefragt: ${editionId}`);
         
-        // Vollständige Edition-Daten
-        const editionData = {
-            winter_special: {
-                id: "winter_special",
-                name: {
-                    de: "Winter-Special",
-                    en: "Winter Special"
-                },
-                icon: "❄️",
-                color: "#74b9ff",
-                type: "seasonal",
-                difficulty: 2,
-                free: true,
-                unlocked: true,
-                locations: [
-                    {
-                        id: "weihnachtsmarkt_koeln",
-                        name: {de: "Kölner Weihnachtsmarkt", en: "Cologne Christmas Market"},
-                        flag: "🎄",
-                        type: "Weihnachtsmarkt",
-                        bonus: 50
-                    },
-                    {
-                        id: "skigebiet_alpen", 
-                        name: {de: "Alpen Skigebiet", en: "Alpine Ski Resort"},
-                        flag: "⛷️",
-                        type: "Skigebiet",
-                        bonus: 100
-                    },
-                    {
-                        id: "eislaufbahn_muenchen",
-                        name: {de: "Münchner Eislaufbahn", en: "Munich Ice Rink"},
-                        flag: "⛸️",
-                        type: "Eislaufbahn"
-                    }
-                ]
-            },
-            autobahn: {
-                id: "autobahn",
-                name: {
-                    de: "Autobahn-Edition",
-                    en: "Highway Edition"
-                },
-                icon: "🛣️",
-                color: "#636e72",
-                type: "transport",
-                difficulty: 2,
-                free: true,
-                unlocked: true,
-                locations: [
-                    {
-                        id: "raststaette_a1",
-                        name: {de: "Raststätte A1 Nord", en: "A1 North Rest Stop"},
-                        flag: "🚗",
-                        type: "Raststätte"
-                    },
-                    {
-                        id: "autohof_a7",
-                        name: {de: "Autohof A7", en: "A7 Truck Stop"},
-                        flag: "🚚", 
-                        type: "Autohof"
-                    }
-                ]
-            }
-        };
+        // Lade ECHTE Edition aus JSON-Datei
+        const edition = await loadEdition(editionId);
         
-        if (editionData[editionId]) {
+        if (edition) {
             console.log(`✅ Edition ${editionId} gefunden und gesendet`);
-            res.json(editionData[editionId]);
+            res.json(edition);
         } else {
             console.log(`❌ Edition ${editionId} nicht gefunden`);
-            res.status(404).json({ error: 'Edition not found' });
+            
+            // Liste verfügbare Editionen auf
+            const available = await listAvailableEditions();
+            res.status(404).json({ 
+                error: 'Edition not found',
+                requestedEdition: editionId,
+                availableEditions: available
+            });
         }
         
     } catch (error) {
         console.error('❌ Edition Error:', error);
-        res.status(500).json({ error: 'Server error' });
+        res.status(500).json({ error: 'Server error', details: error.message });
+    }
+});
+
+// 🔥 NEU: Alle verfügbaren Editionen auflisten
+app.get('/content/editions', async (req, res) => {
+    try {
+        console.log('📋 Liste aller Editionen angefragt');
+        
+        const editionIds = await listAvailableEditions();
+        const editions = {};
+        
+        // Lade alle Editionen
+        for (const editionId of editionIds) {
+            const edition = await loadEdition(editionId);
+            if (edition) {
+                editions[editionId] = edition;
+            }
+        }
+        
+        console.log(`✅ ${Object.keys(editions).length} Editionen geladen`);
+        res.json(editions);
+        
+    } catch (error) {
+        console.error('❌ Editions List Error:', error);
+        res.status(500).json({ error: 'Server error', details: error.message });
+    }
+});
+
+// 🔥 NEU: Content-Verwaltung - Zeige alle Files
+app.get('/admin/content-status', async (req, res) => {
+    try {
+        console.log('🔍 Content-Status angefragt');
+        
+        const status = {
+            contentDir: CONTENT_DIR,
+            metadataExists: false,
+            editionsDir: EDITIONS_DIR,
+            availableEditions: [],
+            totalFiles: 0
+        };
+        
+        // Prüfe Metadata
+        try {
+            await fs.access(METADATA_FILE);
+            status.metadataExists = true;
+            const metadata = await loadMetadata();
+            status.metadataVersion = metadata.version;
+        } catch (e) {
+            status.metadataError = e.message;
+        }
+        
+        // Prüfe Editionen
+        try {
+            status.availableEditions = await listAvailableEditions();
+            status.totalFiles = status.availableEditions.length;
+        } catch (e) {
+            status.editionsError = e.message;
+        }
+        
+        console.log('📊 Content Status:', status);
+        res.json(status);
+        
+    } catch (error) {
+        console.error('❌ Content Status Error:', error);
+        res.status(500).json({ error: 'Server error', details: error.message });
     }
 });
 
 // Health Check
-app.get('/health', (req, res) => {
+app.get('/health', async (req, res) => {
     console.log('💓 Health Check');
+    
+    const metadata = await loadMetadata();
+    const editions = await listAvailableEditions();
+    
     res.json({ 
         status: 'healthy', 
         timestamp: new Date().toISOString(),
         uptime: process.uptime(),
-        contentAvailable: true
+        contentAvailable: true,
+        metadataVersion: metadata.version,
+        availableEditions: editions.length
     });
 });
 
 // Test-Route
-app.get('/test', (req, res) => {
+app.get('/test', async (req, res) => {
     console.log('🧪 Test Route aufgerufen');
+    
+    const metadata = await loadMetadata();
+    const editions = await listAvailableEditions();
+    
     res.json({ 
         message: 'Content-Server läuft!',
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        contentVersion: metadata.version,
+        availableEditions: editions
     });
 });
 
@@ -242,7 +250,7 @@ app.options('*', cors());
 // Error Handler
 app.use((error, req, res, next) => {
     console.error('❌ Server Error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: 'Internal server error', details: error.message });
 });
 
 // 404 Handler
@@ -255,12 +263,28 @@ app.use((req, res) => {
 async function startServer() {
     await ensureContentDir();
     
+    // Teste Content beim Start
+    console.log('🔍 Teste Content beim Server-Start...');
+    const metadata = await loadMetadata();
+    const editions = await listAvailableEditions();
+    
+    console.log(`📊 Content-Status:
+    - Metadata Version: ${metadata.version}
+    - Verfügbare Editionen: ${editions.length}
+    - Editionen: ${editions.join(', ')}`);
+    
     app.listen(PORT, () => {
-        console.log(`🚀 Content Server läuft auf Port ${PORT}`);
+        console.log(`🚀 DYNAMISCHER Content Server läuft auf Port ${PORT}`);
         console.log(`📁 Content-Verzeichnis: ${CONTENT_DIR}`);
-        console.log(`🌐 Test-URL: http://localhost:${PORT}/test`);
-        console.log(`🔍 Update-Check: http://localhost:${PORT}/content/check-updates`);
-        console.log(`💓 Health-Check: http://localhost:${PORT}/health`);
+        console.log(`📁 Editionen-Verzeichnis: ${EDITIONS_DIR}`);
+        console.log(`
+🌐 Test-URLs:
+   - Test: http://localhost:${PORT}/test
+   - Update-Check: http://localhost:${PORT}/content/check-updates
+   - Health: http://localhost:${PORT}/health
+   - Content Status: http://localhost:${PORT}/admin/content-status
+   - Alle Editionen: http://localhost:${PORT}/content/editions
+        `);
     });
 }
 

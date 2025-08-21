@@ -1,0 +1,507 @@
+{
+  "version": "1.2.0",
+  "lastUpdated": "2025-08-21T20:00:00Z",
+  "minAppVersion": "1.0.0",
+  "updateAvailable": true,
+  "newContent": {
+    "title": {
+      "de": "Neue Frühlings-Edition verfügbar! 🌸",
+      "en": "New Spring Edition available! 🌸"
+    },
+    "description": {
+      "de": "Biergärten, Festivals und Outdoor-Locations jetzt spielbar!",
+      "en": "Beer gardens, festivals and outdoor locations now playable!"
+    },
+    "icon": "🌸"
+  },
+  "contentPacks": {
+    "spring_special_2025": {
+      "id": "spring_special_2025",
+      "name": {
+        "de": "Frühlings-Special 2025",
+        "en": "Spring Special 2025"
+      },
+      "color": "#55a3ff",
+      "icon": "🌸",
+      "type": "seasonal",
+      "free": true,
+      "available": true,
+      "startDate": "2025-03-01",
+      "endDate": "2025-05-31",
+      "unlockConditions": [
+        {"type": "season", "seasons": ["spring"]}
+      ],
+      "locations": [
+        {
+          "id": "biergarten_muenchen",
+          "name": {
+            "de": "Münchner Biergarten",
+            "en": "Munich Beer Garden"
+          },
+          "flag": "🍺",
+          "type": {
+            "de": "Biergarten",
+            "en": "Beer Garden"
+          },
+          "bonus": 60
+        },
+        {
+          "id": "fruehlingsfest_berlin",
+          "name": {
+            "de": "Berliner Frühlingsfest",
+            "en": "Berlin Spring Festival"
+          },
+          "flag": "🎪",
+          "type": {
+            "de": "Frühlingsfest",
+            "en": "Spring Festival"
+          },
+          "bonus": 80
+        },
+        {
+          "id": "park_toilette_hamburg",
+          "name": {
+            "de": "Hamburger Stadtpark",
+            "en": "Hamburg City Park"
+          },
+          "flag": "🌳",
+          "type": {
+            "de": "Park-Toilette",
+            "en": "Park Toilet"
+          },
+          "bonus": 40
+        },
+        {
+          "id": "ostermarkt_koeln",
+          "name": {
+            "de": "Kölner Ostermarkt",
+            "en": "Cologne Easter Market"
+          },
+          "flag": "🐰",
+          "type": {
+            "de": "Ostermarkt",
+            "en": "Easter Market"
+          },
+          "bonus": 70
+        },
+        {
+          "id": "campingplatz_nordsee",
+          "name": {
+            "de": "Campingplatz Nordsee",
+            "en": "North Sea Camping"
+          },
+          "flag": "🏕️",
+          "type": {
+            "de": "Campingplatz",
+            "en": "Camping Site"
+          },
+          "bonus": 50
+        }
+      ]
+    },
+    "streaming_edition": {
+      "id": "streaming_edition",
+      "name": {
+        "de": "Streaming-Edition",
+        "en": "Streaming Edition"
+      },
+      "color": "#9b59b6",
+      "icon": "📺",
+      "type": "modern",
+      "free": true,
+      "available": true,
+      "unlockConditions": [
+        {"type": "score", "score": 300}
+      ],
+      "locations": [
+        {
+          "id": "netflix_hq",
+          "name": {
+            "de": "Netflix Studio",
+            "en": "Netflix Studio"
+          },
+          "flag": "🎬",
+          "type": {
+            "de": "Streaming-Studio",
+            "en": "Streaming Studio"
+          }
+        },
+        {
+          "id": "youtube_space",
+          "name": {
+            "de": "YouTube Creator Space",
+            "en": "YouTube Creator Space"
+          },
+          "flag": "📹",
+          "type": {
+            "de": "Creator Studio",
+            "en": "Creator Studio"
+          }
+        },
+        {
+          "id": "twitch_con",
+          "name": {
+            "de": "TwitchCon",
+            "en": "TwitchCon"
+          },
+          "flag": "🎮",
+          "type": {
+            "de": "Gaming Convention",
+            "en": "Gaming Convention"
+          }
+        },
+        {
+          "id": "podcast_studio",
+          "name": {
+            "de": "Podcast Studio",
+            "en": "Podcast Studio"
+          },
+          "flag": "🎙️",
+          "type": {
+            "de": "Podcast Studio",
+            "en": "Podcast Studio"
+          }
+        }
+      ]
+    },
+    "karneval_edition": {
+      "id": "karneval_edition",
+      "name": {
+        "de": "Karneval-Edition",
+        "en": "Carnival Edition"
+      },
+      "color": "#e74c3c",
+      "icon": "🎭",
+      "type": "event",
+      "free": true,
+      "available": true,
+      "startDate": "2025-02-01",
+      "endDate": "2025-03-15",
+      "unlockConditions": [
+        {"type": "time_based", "start": "2025-02-01", "end": "2025-03-15"}
+      ],
+      "locations": [
+        {
+          "id": "karneval_koeln",
+          "name": {
+            "de": "Kölner Karneval",
+            "en": "Cologne Carnival"
+          },
+          "flag": "🎪",
+          "type": {
+            "de": "Karnevals-WC",
+            "en": "Carnival Toilet"
+          },
+          "bonus": 150
+        },
+        {
+          "id": "fasching_muenchen",
+          "name": {
+            "de": "Münchner Fasching",
+            "en": "Munich Carnival"
+          },
+          "flag": "🥨",
+          "type": {
+            "de": "Bierzelt-WC",
+            "en": "Beer Tent Toilet"
+          },
+          "bonus": 120
+        },
+        {
+          "id": "rosenmontag_duesseldorf",
+          "name": {
+            "de": "Düsseldorfer Rosenmontag",
+            "en": "Düsseldorf Rose Monday"
+          },
+          "flag": "🌹",
+          "type": {
+            "de": "Umzugswagen-WC",
+            "en": "Parade Float Toilet"
+          },
+          "bonus": 200
+        }
+      ]
+    },
+    "retro_gaming_edition": {
+      "id": "retro_gaming_edition",
+      "name": {
+        "de": "Retro Gaming Edition",
+        "en": "Retro Gaming Edition"
+      },
+      "color": "#16a085",
+      "icon": "🕹️",
+      "type": "premium",
+      "free": false,
+      "price": 1.49,
+      "currency": "EUR",
+      "available": true,
+      "unlockConditions": [
+        {"type": "premium"}
+      ],
+      "locations": [
+        {
+          "id": "arcade_1980",
+          "name": {
+            "de": "80er Spielhalle",
+            "en": "80s Arcade"
+          },
+          "flag": "👾",
+          "type": {
+            "de": "Retro Arcade",
+            "en": "Retro Arcade"
+          },
+          "bonus": 180
+        },
+        {
+          "id": "nintendo_museum",
+          "name": {
+            "de": "Nintendo Museum",
+            "en": "Nintendo Museum"
+          },
+          "flag": "🎮",
+          "type": {
+            "de": "Gaming Museum",
+            "en": "Gaming Museum"
+          },
+          "bonus": 250
+        },
+        {
+          "id": "pacman_cafe",
+          "name": {
+            "de": "Pac-Man Café",
+            "en": "Pac-Man Café"
+          },
+          "flag": "👻",
+          "type": {
+            "de": "Gaming Café",
+            "en": "Gaming Café"
+          },
+          "bonus": 160
+        },
+        {
+          "id": "gameboy_store",
+          "name": {
+            "de": "Game Boy Store",
+            "en": "Game Boy Store"
+          },
+          "flag": "📱",
+          "type": {
+            "de": "Retro Gaming Shop",
+            "en": "Retro Gaming Shop"
+          },
+          "bonus": 140
+        }
+      ]
+    },
+    "food_truck_edition": {
+      "id": "food_truck_edition",
+      "name": {
+        "de": "Food Truck Edition",
+        "en": "Food Truck Edition"
+      },
+      "color": "#f39c12",
+      "icon": "🚚",
+      "type": "modern",
+      "free": true,
+      "available": true,
+      "unlockConditions": [
+        {"type": "time_since_install", "days": 10}
+      ],
+      "locations": [
+        {
+          "id": "burger_truck_berlin",
+          "name": {
+            "de": "Burger Truck Berlin",
+            "en": "Burger Truck Berlin"
+          },
+          "flag": "🍔",
+          "type": {
+            "de": "Food Truck",
+            "en": "Food Truck"
+          }
+        },
+        {
+          "id": "taco_truck_hamburg",
+          "name": {
+            "de": "Taco Truck Hamburg",
+            "en": "Taco Truck Hamburg"
+          },
+          "flag": "🌮",
+          "type": {
+            "de": "Food Truck",
+            "en": "Food Truck"
+          }
+        },
+        {
+          "id": "eis_truck_muenchen",
+          "name": {
+            "de": "Eis Truck München",
+            "en": "Ice Cream Truck Munich"
+          },
+          "flag": "🍦",
+          "type": {
+            "de": "Eis-Truck",
+            "en": "Ice Cream Truck"
+          }
+        }
+      ]
+    }
+  },
+  "achievements": {
+    "spring_lover": {
+      "id": "spring_lover",
+      "name": {
+        "de": "Frühlings-Liebhaber",
+        "en": "Spring Lover"
+      },
+      "description": {
+        "de": "Besuche alle Frühlings-Locations",
+        "en": "Visit all spring locations"
+      },
+      "icon": "🌸",
+      "target": 5,
+      "type": "edition_complete",
+      "editionId": "spring_special_2025",
+      "reward": {
+        "points": 400,
+        "title": {
+          "de": "Frühlingskaiser",
+          "en": "Spring Emperor"
+        }
+      }
+    },
+    "carnival_king": {
+      "id": "carnival_king",
+      "name": {
+        "de": "Karnevals-König",
+        "en": "Carnival King"
+      },
+      "description": {
+        "de": "Besuche alle Karneval-Toiletten",
+        "en": "Visit all carnival toilets"
+      },
+      "icon": "🎭",
+      "target": 3,
+      "type": "edition_complete",
+      "editionId": "karneval_edition"
+    },
+    "retro_gamer": {
+      "id": "retro_gamer",
+      "name": {
+        "de": "Retro Gamer",
+        "en": "Retro Gamer"
+      },
+      "description": {
+        "de": "Sammle alle Retro Gaming Locations",
+        "en": "Collect all retro gaming locations"
+      },
+      "icon": "🕹️",
+      "target": 4,
+      "type": "edition_complete",
+      "editionId": "retro_gaming_edition"
+    },
+    "streaming_star": {
+      "id": "streaming_star",
+      "name": {
+        "de": "Streaming-Star",
+        "en": "Streaming Star"
+      },
+      "description": {
+        "de": "Nutze alle Streaming-Locations",
+        "en": "Use all streaming locations"
+      },
+      "icon": "📺",
+      "target": 4,
+      "type": "edition_complete",
+      "editionId": "streaming_edition"
+    }
+  },
+  "events": {
+    "easter_hunt": {
+      "id": "easter_hunt",
+      "name": {
+        "de": "Oster-Toiletten-Jagd",
+        "en": "Easter Toilet Hunt"
+      },
+      "description": {
+        "de": "Finde 15 versteckte Oster-Toiletten bis Ostern!",
+        "en": "Find 15 hidden Easter toilets until Easter!"
+      },
+      "startDate": "2025-03-15",
+      "endDate": "2025-04-20",
+      "target": 15,
+      "reward": {
+        "points": 2000,
+        "unlock": "golden_easter_toilet",
+        "title": {
+          "de": "Oster-Hase",
+          "en": "Easter Bunny"
+        }
+      }
+    },
+    "food_truck_festival": {
+      "id": "food_truck_festival",
+      "name": {
+        "de": "Food Truck Festival",
+        "en": "Food Truck Festival"
+      },
+      "description": {
+        "de": "Besuche 20 Food Trucks in 2 Wochen",
+        "en": "Visit 20 food trucks in 2 weeks"
+      },
+      "startDate": "2025-04-01",
+      "endDate": "2025-04-15",
+      "target": 20,
+      "reward": {
+        "points": 1500,
+        "unlock": "master_chef_toilet"
+      }
+    }
+  },
+  "notifications": [
+    {
+      "id": "spring_announcement",
+      "title": {
+        "de": "🌸 Frühling ist da!",
+        "en": "🌸 Spring is here!"
+      },
+      "message": {
+        "de": "Entdecke neue Biergärten und Outdoor-Locations in der Frühlings-Edition!",
+        "en": "Discover new beer gardens and outdoor locations in the Spring Edition!"
+      },
+      "type": "content_update",
+      "priority": "high",
+      "showUntil": "2025-03-31T23:59:59Z"
+    },
+    {
+      "id": "carnival_limited",
+      "title": {
+        "de": "⏰ Karneval-Edition endet bald!",
+        "en": "⏰ Carnival Edition ending soon!"
+      },
+      "message": {
+        "de": "Nur noch wenige Tage! Sammle alle Karneval-Toiletten bevor sie verschwinden.",
+        "en": "Only a few days left! Collect all carnival toilets before they disappear."
+      },
+      "type": "urgency",
+      "priority": "medium",
+      "showAfter": "2025-03-10T00:00:00Z",
+      "showUntil": "2025-03-15T23:59:59Z"
+    }
+  ],
+  "settings": {
+    "updateFrequency": 21600000,
+    "cacheTime": 1800000,
+    "fallbackEnabled": true,
+    "compressionEnabled": true,
+    "notificationEnabled": true
+  },
+  "metadata": {
+    "serverVersion": "2.2.0",
+    "supportedAppVersions": ["1.0.0", "1.1.0", "1.2.0"],
+    "regions": ["de", "at", "ch"],
+    "languages": ["de", "en"],
+    "contentHash": "spring2025xyz789",
+    "updatePriority": "medium"
+  }
+}
