@@ -1,0 +1,196 @@
+{
+  "id": "winter_special",
+  "name": {
+    "de": "Winter-Special",
+    "en": "Winter Special"
+  },
+  "icon": "❄️",
+  "color": "#74b9ff",
+  "type": "seasonal",
+  "difficulty": 2,
+  "free": true,
+  "available": true,
+  "startDate": "2024-12-01",
+  "endDate": "2025-02-28",
+  "unlockConditions": [
+    {
+      "type": "season",
+      "seasons": ["winter"]
+    },
+    {
+      "type": "date_range",
+      "startDate": "2024-12-01",
+      "endDate": "2025-02-28"
+    }
+  ],
+  "locations": [
+    {
+      "id": "weihnachtsmarkt_koeln",
+      "name": {
+        "de": "Kölner Weihnachtsmarkt",
+        "en": "Cologne Christmas Market"
+      },
+      "flag": "🎄",
+      "type": {
+        "de": "Weihnachtsmarkt",
+        "en": "Christmas Market"
+      },
+      "coordinates": {
+        "lat": 50.9375,
+        "lng": 6.9603
+      },
+      "bonus": 50,
+      "specialReward": {
+        "type": "seasonal_achievement",
+        "id": "christmas_spirit"
+      }
+    },
+    {
+      "id": "weihnachtsmarkt_nuernberg",
+      "name": {
+        "de": "Nürnberger Christkindlmarkt",
+        "en": "Nuremberg Christmas Market"
+      },
+      "flag": "🎁",
+      "type": {
+        "de": "Weihnachtsmarkt",
+        "en": "Christmas Market"
+      },
+      "coordinates": {
+        "lat": 49.4521,
+        "lng": 11.0767
+      },
+      "bonus": 75,
+      "description": {
+        "de": "Einer der berühmtesten Weihnachtsmärkte der Welt",
+        "en": "One of the world's most famous Christmas markets"
+      }
+    },
+    {
+      "id": "skigebiet_alpen",
+      "name": {
+        "de": "Alpen Skigebiet",
+        "en": "Alpine Ski Resort"
+      },
+      "flag": "⛷️",
+      "type": {
+        "de": "Skigebiet",
+        "en": "Ski Resort"
+      },
+      "coordinates": {
+        "lat": 47.4212,
+        "lng": 10.9852
+      },
+      "bonus": 100,
+      "specialReward": {
+        "type": "seasonal_achievement",
+        "id": "winter_athlete"
+      }
+    },
+    {
+      "id": "eislaufbahn_muenchen",
+      "name": {
+        "de": "Münchner Eislaufbahn",
+        "en": "Munich Ice Rink"
+      },
+      "flag": "⛸️",
+      "type": {
+        "de": "Eislaufbahn",
+        "en": "Ice Rink"
+      },
+      "coordinates": {
+        "lat": 48.1351,
+        "lng": 11.5820
+      },
+      "bonus": 30
+    },
+    {
+      "id": "heisse_schokolade_stand",
+      "name": {
+        "de": "Heisse Schokolade Stand",
+        "en": "Hot Chocolate Stand"
+      },
+      "flag": "☕",
+      "type": {
+        "de": "Getränkestand",
+        "en": "Beverage Stand"
+      },
+      "bonus": 25,
+      "description": {
+        "de": "Perfekt für kalte Wintertage",
+        "en": "Perfect for cold winter days"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "winter_warrior",
+      "name": {
+        "de": "Winter-Krieger",
+        "en": "Winter Warrior"
+      },
+      "description": {
+        "de": "Besuche alle Winter-Locations",
+        "en": "Visit all winter locations"
+      },
+      "icon": "❄️",
+      "target": 5,
+      "type": "edition_complete",
+      "editionId": "winter_special",
+      "reward": {
+        "points": 500,
+        "title": {
+          "de": "Schneekönig",
+          "en": "Snow King"
+        }
+      }
+    },
+    {
+      "id": "christmas_spirit",
+      "name": {
+        "de": "Weihnachtsgeist",
+        "en": "Christmas Spirit"
+      },
+      "description": {
+        "de": "Besuche einen Weihnachtsmarkt",
+        "en": "Visit a Christmas market"
+      },
+      "icon": "🎄",
+      "target": 1,
+      "type": "location_visit",
+      "locationTypes": ["Weihnachtsmarkt"],
+      "reward": {
+        "points": 100
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "christmas_marathon",
+      "name": {
+        "de": "Weihnachts-Marathon",
+        "en": "Christmas Marathon"
+      },
+      "description": {
+        "de": "Besuche 25 Toiletten bis zum 25. Dezember",
+        "en": "Visit 25 toilets until December 25th"
+      },
+      "startDate": "2024-12-01",
+      "endDate": "2024-12-25",
+      "target": 25,
+      "reward": {
+        "points": 1000,
+        "unlock": "santa_edition"
+      }
+    }
+  ],
+  "metadata": {
+    "createdAt": "2025-08-21T20:00:00Z",
+    "version": "1.0.0",
+    "author": "Klo-Kollektor Team",
+    "category": "seasonal",
+    "tags": ["winter", "christmas", "skiing", "seasonal"],
+    "downloadSize": 8924,
+    "language": ["de", "en"]
+  }
+}

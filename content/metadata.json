@@ -1,0 +1,94 @@
+{
+  "version": "1.1.0",
+  "lastUpdated": "2025-08-21T20:00:00Z",
+  "minAppVersion": "2.0.0",
+  "contentPacks": {
+    "seasonal_winter_2025": {
+      "id": "seasonal_winter_2025",
+      "name": {
+        "de": "Winter-Special 2025",
+        "en": "Winter Special 2025"
+      },
+      "description": {
+        "de": "Weihnachtsmärkte und Skigebiete",
+        "en": "Christmas markets and ski resorts"
+      },
+      "type": "seasonal",
+      "free": true,
+      "available": true,
+      "startDate": "2024-12-01",
+      "endDate": "2025-02-28",
+      "downloadSize": 15420,
+      "editions": {
+        "winter_special": {
+          "id": "winter_special",
+          "file": "winter_special.json",
+          "size": 8924
+        }
+      }
+    },
+    "transport_autobahn": {
+      "id": "transport_autobahn",
+      "name": {
+        "de": "Autobahn-Edition",
+        "en": "Highway Edition"
+      },
+      "description": {
+        "de": "Deutsche Autobahnen und Raststätten",
+        "en": "German highways and rest stops"
+      },
+      "type": "transport",
+      "free": true,
+      "available": true,
+      "downloadSize": 12340,
+      "editions": {
+        "autobahn": {
+          "id": "autobahn",
+          "file": "autobahn.json",
+          "size": 6496
+        }
+      }
+    },
+    "premium_luxury": {
+      "id": "premium_luxury",
+      "name": {
+        "de": "Luxus-Edition",
+        "en": "Luxury Edition"
+      },
+      "description": {
+        "de": "Exklusive Hotels und Restaurants",
+        "en": "Exclusive hotels and restaurants"
+      },
+      "type": "premium",
+      "free": false,
+      "price": 1.99,
+      "currency": "EUR",
+      "available": true,
+      "downloadSize": 18750,
+      "editions": {
+        "luxury": {
+          "id": "luxury",
+          "file": "luxury.json",
+          "size": 9875
+        }
+      }
+    }
+  },
+  "newContent": {
+    "title": {
+      "de": "Winter-Edition verfügbar!",
+      "en": "Winter Edition available!"
+    },
+    "description": {
+      "de": "Weihnachtsmärkte und Skigebiete jetzt spielbar!",
+      "en": "Christmas markets and ski resorts now playable!"
+    },
+    "icon": "❄️"
+  },
+  "serverInfo": {
+    "version": "1.1.0",
+    "supportedAppVersions": ["2.0.0", "2.1.0"],
+    "regions": ["de", "at", "ch"],
+    "languages": ["de", "en"]
+  }
+}
