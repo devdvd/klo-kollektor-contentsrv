@@ -28,6 +28,23 @@ app.use((req, res, next) => {
     next();
 });
 
+// 🔧 CORS FIX - Füge das NACH app = express() ein:
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    res.header('Access-Control-Max-Age', '3600');
+    
+    console.log(`📤 CORS Headers gesetzt für: ${req.method} ${req.url}`);
+    
+    if (req.method === 'OPTIONS') {
+        console.log('⚡ OPTIONS Request beantwortet');
+        res.sendStatus(200);
+    } else {
+        next();
+    }
+});
+
 // Content-Verzeichnis
 const CONTENT_DIR = path.join(__dirname, 'content');
 const METADATA_FILE = path.join(CONTENT_DIR, 'metadata.json');
