@@ -6,6 +6,7 @@ const cors = require('cors');
 const compression = require('compression');
 const fs = require('fs').promises;
 const path = require('path');
+const os = require('os'); // Füge das am Anfang der server.js hinzu
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -261,6 +262,7 @@ app.use((req, res) => {
 
 // Start Server
 async function startServer() {
+    const hostname = os.hostname();
     await ensureContentDir();
     
     // Teste Content beim Start
@@ -279,11 +281,11 @@ async function startServer() {
         console.log(`📁 Editionen-Verzeichnis: ${EDITIONS_DIR}`);
         console.log(`
 🌐 Test-URLs:
-   - Test: http://localhost:${PORT}/test
-   - Update-Check: http://localhost:${PORT}/content/check-updates
-   - Health: http://localhost:${PORT}/health
-   - Content Status: http://localhost:${PORT}/admin/content-status
-   - Alle Editionen: http://localhost:${PORT}/content/editions
+   - Test: http://${hostname}:${PORT}/test
+   - Update-Check: http://${hostname}:${PORT}/content/check-updates
+   - Health: http://${hostname}:${PORT}/health
+   - Content Status: http://${hostname}:${PORT}/admin/content-status
+   - Alle Editionen: http://${hostname}:${PORT}/content/editions
         `);
     });
 }
