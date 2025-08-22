@@ -307,14 +307,6 @@ async function startServer() {
         console.log(`🚀 DYNAMISCHER Content Server läuft auf Port ${PORT}`);
         console.log(`📁 Content-Verzeichnis: ${CONTENT_DIR}`);
         console.log(`📁 Editionen-Verzeichnis: ${EDITIONS_DIR}`);
-        console.log(`
-🌐 Test-URLs:
-   - Test: http://${hostname}:${PORT}/test
-   - Update-Check: http://${hostname}:${PORT}/content/check-updates
-   - Health: http://${hostname}:${PORT}/health
-   - Content Status: http://${hostname}:${PORT}/admin/content-status
-   - Alle Editionen: http://${hostname}:${PORT}/content/editions
-        `);
     });
 }
 
