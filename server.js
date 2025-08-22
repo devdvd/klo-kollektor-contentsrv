@@ -16,6 +16,34 @@ app.use(cors());
 app.use(compression());
 app.use(express.json());
 
+app.use((req, res, next) => {
+    const start = Date.now();
+    const timestamp = new Date().toISOString();
+    const method = req.method;
+    const url = req.url;
+    const ip = req.ip || req.connection.remoteAddress || req.headers['x-forwarded-for'];
+    const userAgent = req.get('User-Agent') || 'Unknown';
+    
+    // Log Request
+    console.log(`📥 [REQUEST] ${timestamp}`);
+    console.log(`   Method: ${method}`);
+    console.log(`   URL: ${url}`);
+    console.log(`   IP: ${ip}`);
+    console.log(`   User-Agent: ${userAgent.substring(0, 100)}...`);
+    
+    // Log Response when finished
+    res.on('finish', () => {
+        const duration = Date.now() - start;
+        const statusCode = res.statusCode;
+        const statusEmoji = statusCode >= 400 ? '❌' : statusCode >= 300 ? '⚠️' : '✅';
+        
+        console.log(`📤 [RESPONSE] ${statusEmoji} ${statusCode} | ${duration}ms | ${method} ${url}`);
+        console.log(`   ----------------------------------------`);
+    });
+    
+    next();
+});
+
 // Content-Verzeichnis
 const CONTENT_DIR = path.join(__dirname, 'content');
 const METADATA_FILE = path.join(CONTENT_DIR, 'metadata.json');
