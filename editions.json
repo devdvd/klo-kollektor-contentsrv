@@ -1,0 +1,105 @@
+[
+  {
+    "id": "bundeslander",
+    "title": "Deutsche Bundesländer",
+    "description": "Sammle alle 16 Bundesländer Deutschlands!",
+    "type": "geographical",
+    "icon": "🇩🇪",
+    "regions": [
+      {
+        "id": "bw",
+        "name": "Baden-Württemberg",
+        "smallBusinessPoints": 5,
+        "bigBusinessPoints": 10,
+        "isVisited": false,
+        "smallBusinessCount": 0,
+        "bigBusinessCount": 0
+      },
+      {
+        "id": "by",
+        "name": "Bayern",
+        "smallBusinessPoints": 5,
+        "bigBusinessPoints": 10,
+        "isVisited": false,
+        "smallBusinessCount": 0,
+        "bigBusinessCount": 0
+      },
+      {
+        "id": "be",
+        "name": "Berlin",
+        "smallBusinessPoints": 3,
+        "bigBusinessPoints": 7,
+        "isVisited": false,
+        "smallBusinessCount": 0,
+        "bigBusinessCount": 0
+      }
+      // ... weitere Bundesländer
+    ],
+    "isLocked": false,
+    "unlockCondition": null,
+    "availableFrom": null,
+    "availableUntil": null
+  },
+  {
+    "id": "european_capitals",
+    "title": "Europäische Hauptstädte",
+    "description": "Besuche die Toiletten in den Hauptstädten Europas!",
+    "type": "geographical",
+    "icon": "🌍",
+    "regions": [
+      {
+        "id": "paris",
+        "name": "Paris (Frankreich)",
+        "smallBusinessPoints": 8,
+        "bigBusinessPoints": 15,
+        "isVisited": false,
+        "smallBusinessCount": 0,
+        "bigBusinessCount": 0
+      },
+      {
+        "id": "rome",
+        "name": "Rom (Italien)",
+        "smallBusinessPoints": 8,
+        "bigBusinessPoints": 15,
+        "isVisited": false,
+        "smallBusinessCount": 0,
+        "bigBusinessCount": 0
+      }
+    ],
+    "isLocked": true,
+    "unlockCondition": "Sammle 5 deutsche Bundesländer, um diese Edition freizuschalten.",
+    "availableFrom": "2024-01-01",
+    "availableUntil": null
+  },
+  {
+    "id": "football_stadions",
+    "title": "Fußball-Stadien",
+    "description": "Besuche die Toiletten in den größten Fußball-Arenen!",
+    "type": "sport",
+    "icon": "⚽",
+    "regions": [
+      {
+        "id": "allianz_arena",
+        "name": "Allianz Arena (FC Bayern München)",
+        "smallBusinessPoints": 10,
+        "bigBusinessPoints": 20,
+        "isVisited": false,
+        "smallBusinessCount": 0,
+        "bigBusinessCount": 0
+      },
+      {
+        "id": "signal_iduna_park",
+        "name": "Signal Iduna Park (Borussia Dortmund)",
+        "smallBusinessPoints": 10,
+        "bigBusinessPoints": 20,
+        "isVisited": false,
+        "smallBusinessCount": 0,
+        "bigBusinessCount": 0
+      }
+    ],
+    "isLocked": false,
+    "unlockCondition": null,
+    "availableFrom": null,
+    "availableUntil": null
+  }
+]
