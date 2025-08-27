@@ -1,0 +1,81 @@
+{
+  "version": "1.1.0",
+  "buildTime": "2025-08-27T20:00:00Z",
+  "buildNumber": 2508272000,
+  "lastUpdate": "2025-08-27T20:00:00Z",
+  "releaseNotes": {
+    "de": [
+      "🎄 Winter-Special 2025 hinzugefügt",
+      "🛣️ Neue Autobahn-Edition verfügbar", 
+      "💎 Premium Luxus-Editionen erweitert",
+      "🏆 Neue Erfolge und Events",
+      "🔧 Performance-Verbesserungen"
+    ],
+    "en": [
+      "🎄 Winter Special 2025 added",
+      "🛣️ New Highway Edition available",
+      "💎 Premium Luxury Editions expanded", 
+      "🏆 New achievements and events",
+      "🔧 Performance improvements"
+    ]
+  },
+  "changelog": {
+    "1.1.0": {
+      "date": "2025-08-27",
+      "type": "minor",
+      "changes": {
+        "de": [
+          "Winter-Special mit Weihnachtsmärkten und Skigebieten",
+          "Autobahn-Edition mit Raststätten",
+          "Luxus-Edition mit Premium-Locations",
+          "Neue Erfolge: Winter-Krieger, Autobahn-Held",
+          "Saisonale Events und Belohnungen"
+        ],
+        "en": [
+          "Winter Special with Christmas markets and ski resorts",
+          "Highway Edition with rest stops", 
+          "Luxury Edition with premium locations",
+          "New achievements: Winter Warrior, Highway Hero",
+          "Seasonal events and rewards"
+        ]
+      }
+    },
+    "1.0.0": {
+      "date": "2025-08-14",
+      "type": "major", 
+      "changes": {
+        "de": [
+          "Initiale Content-Server Version",
+          "Basis-Editionen: Deutschland, Europa",
+          "Notfall-Pakete: Fast Food, Tankstellen",
+          "Grundlegende Erfolge und Statistiken"
+        ],
+        "en": [
+          "Initial content server version",
+          "Base editions: Germany, Europe", 
+          "Emergency packages: Fast Food, Gas Stations",
+          "Basic achievements and statistics"
+        ]
+      }
+    }
+  },
+  "statistics": {
+    "totalContentPacks": 3,
+    "totalLocations": 11,
+    "totalAchievements": 2,
+    "totalEvents": 1
+  },
+  "updateInfo": {
+    "critical": false,
+    "forceUpdate": false,
+    "downloadSize": "~2KB",
+    "updateType": "content"
+  },
+  "metadata": {
+    "serverVersion": "2.1.0",
+    "contentHash": "sha256:abc123def456...",
+    "regions": ["de", "at", "ch"],
+    "languages": ["de", "en"],
+    "platforms": ["web", "android", "ios"]
+  }
+}
