@@ -1,0 +1,396 @@
+{
+  "version": "1.1.0",
+  "lastUpdated": "2025-08-27T20:00:00Z",
+  "minAppVersion": "1.0.0",
+  "updateAvailable": true,
+  
+  "contentUpdates": [
+    {
+      "id": "winter_special_2025",
+      "version": "1.2.0",
+      "minAppVersion": "1.1.0",
+      "releaseDate": "2025-01-15T00:00:00Z",
+      "priority": "high",
+      "category": "seasonal",
+      "title": {
+        "de": "Winter-Special 2025 ❄️",
+        "en": "Winter Special 2025 ❄️"
+      },
+      "description": {
+        "de": "Weihnachtsmärkte, Skigebiete und heisse Schokolade!",
+        "en": "Christmas markets, ski resorts and hot chocolate!"
+      },
+      "icon": "❄️",
+      "contentIds": ["winter_special_2025"],
+      "features": [
+        {
+          "de": "5 neue Winter-Locations",
+          "en": "5 new winter locations"
+        },
+        {
+          "de": "Saisonale Erfolge",
+          "en": "Seasonal achievements"
+        },
+        {
+          "de": "Bonus-Punkte bis 28. Februar",
+          "en": "Bonus points until February 28th"
+        }
+      ]
+    },
+    {
+      "id": "autobahn_edition_release",
+      "version": "1.3.0",
+      "minAppVersion": "1.2.0", 
+      "releaseDate": "2025-02-01T00:00:00Z",
+      "priority": "medium",
+      "category": "transport",
+      "title": {
+        "de": "Autobahn-Edition 🛣️",
+        "en": "Highway Edition 🛣️"
+      },
+      "description": {
+        "de": "Raststätten, Autohöfe und Tankstellen sammeln!",
+        "en": "Collect rest stops, truck stops and gas stations!"
+      },
+      "icon": "🛣️",
+      "contentIds": ["autobahn_edition"],
+      "unlockRequirement": {
+        "type": "score",
+        "value": 500
+      },
+      "features": [
+        {
+          "de": "4 neue Autobahn-Locations",
+          "en": "4 new highway locations"
+        },
+        {
+          "de": "Reise-Tracker Feature",
+          "en": "Travel tracker feature"
+        }
+      ]
+    },
+    {
+      "id": "premium_luxus_release",
+      "version": "1.4.0",
+      "minAppVersion": "1.3.0",
+      "releaseDate": "2025-03-01T00:00:00Z",
+      "priority": "low",
+      "category": "premium",
+      "title": {
+        "de": "Luxus-Edition 💎",
+        "en": "Luxury Edition 💎"
+      },
+      "description": {
+        "de": "Premium-Toiletten für anspruchsvolle Sammler!",
+        "en": "Premium toilets for discerning collectors!"
+      },
+      "icon": "💎",
+      "contentIds": ["premium_luxus"],
+      "isPremium": true,
+      "price": 1.99,
+      "currency": "EUR",
+      "features": [
+        {
+          "de": "Exklusive Luxus-Hotels",
+          "en": "Exclusive luxury hotels"
+        },
+        {
+          "de": "Michelin-Stern Restaurants",
+          "en": "Michelin star restaurants"
+        },
+        {
+          "de": "VIP-Lounges",
+          "en": "VIP lounges"
+        }
+      ]
+    }
+  ],
+
+  "contentPacks": {
+    "winter_special_2025": {
+      "id": "winter_special_2025",
+      "name": {
+        "de": "Winter-Special 2025",
+        "en": "Winter Special 2025"
+      },
+      "color": "#74b9ff",
+      "icon": "❄️",
+      "type": "seasonal",
+      "free": true,
+      "available": true,
+      "startDate": "2024-12-01",
+      "endDate": "2025-02-28",
+      "unlockConditions": [
+        {"type": "always"}
+      ],
+      "locations": [
+        {
+          "id": "weihnachtsmarkt_koeln",
+          "name": {
+            "de": "Kölner Weihnachtsmarkt",
+            "en": "Cologne Christmas Market"
+          },
+          "flag": "🎄",
+          "type": {
+            "de": "Weihnachtsmarkt",
+            "en": "Christmas Market"
+          },
+          "bonus": 50
+        },
+        {
+          "id": "weihnachtsmarkt_nuernberg",
+          "name": {
+            "de": "Nürnberger Christkindlmarkt",
+            "en": "Nuremberg Christmas Market"
+          },
+          "flag": "🎁",
+          "type": {
+            "de": "Weihnachtsmarkt",
+            "en": "Christmas Market"
+          },
+          "bonus": 75
+        },
+        {
+          "id": "skigebiet_alpen",
+          "name": {
+            "de": "Alpen Skigebiet",
+            "en": "Alpine Ski Resort"
+          },
+          "flag": "⛷️",
+          "type": {
+            "de": "Skigebiet",
+            "en": "Ski Resort"
+          },
+          "bonus": 100
+        },
+        {
+          "id": "eislaufbahn_muenchen",
+          "name": {
+            "de": "Münchner Eislaufbahn",
+            "en": "Munich Ice Rink"
+          },
+          "flag": "⛸️",
+          "type": {
+            "de": "Eislaufbahn",
+            "en": "Ice Rink"
+          },
+          "bonus": 30
+        },
+        {
+          "id": "heisse_schokolade_stand",
+          "name": {
+            "de": "Heisse Schokolade Stand",
+            "en": "Hot Chocolate Stand"
+          },
+          "flag": "☕",
+          "type": {
+            "de": "Getränkestand",
+            "en": "Beverage Stand"
+          },
+          "bonus": 25
+        }
+      ]
+    },
+    
+    "autobahn_edition": {
+      "id": "autobahn_edition", 
+      "name": {
+        "de": "Autobahn-Edition",
+        "en": "Highway Edition"
+      },
+      "color": "#636e72",
+      "icon": "🛣️",
+      "type": "transport",
+      "free": true,
+      "available": true,
+      "unlockConditions": [
+        {"type": "score", "score": 500}
+      ],
+      "locations": [
+        {
+          "id": "raststaette_a1_nord",
+          "name": {
+            "de": "Raststätte A1 Nord",
+            "en": "A1 North Rest Stop"
+          },
+          "flag": "🚗",
+          "type": {
+            "de": "Raststätte",
+            "en": "Rest Stop"
+          }
+        },
+        {
+          "id": "raststaette_a3_sued",
+          "name": {
+            "de": "Raststätte A3 Süd", 
+            "en": "A3 South Rest Stop"
+          },
+          "flag": "🚙",
+          "type": {
+            "de": "Raststätte",
+            "en": "Rest Stop"
+          }
+        },
+        {
+          "id": "autohof_a7",
+          "name": {
+            "de": "Autohof A7",
+            "en": "A7 Truck Stop"
+          },
+          "flag": "🚚",
+          "type": {
+            "de": "Autohof",
+            "en": "Truck Stop"
+          }
+        },
+        {
+          "id": "tankstelle_a9_ost",
+          "name": {
+            "de": "Tankstelle A9 Ost",
+            "en": "A9 East Gas Station"
+          },
+          "flag": "⛽",
+          "type": {
+            "de": "Autobahn-Tankstelle",
+            "en": "Highway Gas Station"
+          }
+        }
+      ]
+    },
+
+    "premium_luxus": {
+      "id": "premium_luxus",
+      "name": {
+        "de": "Luxus-Edition",
+        "en": "Luxury Edition"
+      },
+      "color": "#fdcb6e",
+      "icon": "💎",
+      "type": "premium",
+      "free": false,
+      "price": 1.99,
+      "currency": "EUR",
+      "available": true,
+      "unlockConditions": [
+        {"type": "premium"}
+      ],
+      "locations": [
+        {
+          "id": "hotel_adlon",
+          "name": {
+            "de": "Hotel Adlon Berlin",
+            "en": "Hotel Adlon Berlin"
+          },
+          "flag": "🏨",
+          "type": {
+            "de": "Luxus-Hotel",
+            "en": "Luxury Hotel"
+          },
+          "bonus": 200
+        },
+        {
+          "id": "restaurant_michelin",
+          "name": {
+            "de": "Michelin-Stern Restaurant",
+            "en": "Michelin Star Restaurant"
+          },
+          "flag": "⭐",
+          "type": {
+            "de": "Gourmet-Restaurant",
+            "en": "Gourmet Restaurant"
+          },
+          "bonus": 300
+        },
+        {
+          "id": "first_class_lounge",
+          "name": {
+            "de": "First Class Lounge",
+            "en": "First Class Lounge"
+          },
+          "flag": "✈️",
+          "type": {
+            "de": "VIP-Lounge",
+            "en": "VIP Lounge"
+          },
+          "bonus": 150
+        }
+      ]
+    }
+  },
+
+  "achievements": {
+    "winter_warrior": {
+      "id": "winter_warrior",
+      "name": {
+        "de": "Winter-Krieger",
+        "en": "Winter Warrior"
+      },
+      "description": {
+        "de": "Besuche alle Winter-Locations",
+        "en": "Visit all winter locations"
+      },
+      "icon": "❄️",
+      "target": 5,
+      "type": "edition_complete",
+      "editionId": "winter_special_2025",
+      "reward": {
+        "points": 500,
+        "title": {
+          "de": "Schneekönig",
+          "en": "Snow King"
+        }
+      }
+    },
+    "highway_hero": {
+      "id": "highway_hero",
+      "name": {
+        "de": "Autobahn-Held",
+        "en": "Highway Hero"
+      },
+      "description": {
+        "de": "Nutze 10 Autobahn-Toiletten",
+        "en": "Use 10 highway toilets"
+      },
+      "icon": "🛣️",
+      "target": 10,
+      "type": "location_visits",
+      "editionId": "autobahn_edition"
+    }
+  },
+
+  "events": {
+    "christmas_marathon": {
+      "id": "christmas_marathon",
+      "name": {
+        "de": "Weihnachts-Marathon",
+        "en": "Christmas Marathon"
+      },
+      "description": {
+        "de": "Besuche 25 Toiletten bis zum 25. Dezember",
+        "en": "Visit 25 toilets until December 25th"
+      },
+      "startDate": "2024-12-01",
+      "endDate": "2024-12-25",
+      "target": 25,
+      "reward": {
+        "points": 1000,
+        "unlock": "santa_edition"
+      }
+    }
+  },
+
+  "settings": {
+    "updateFrequency": 86400000,
+    "cacheTime": 3600000,
+    "fallbackEnabled": true,
+    "compressionEnabled": true
+  },
+
+  "metadata": {
+    "serverVersion": "2.2.0",
+    "supportedAppVersions": ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.4.0"],
+    "regions": ["de", "at", "ch"],
+    "languages": ["de", "en"],
+    "contentHash": "abc123def456789"
+  }
+}
