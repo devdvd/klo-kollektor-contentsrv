@@ -1,7 +1,18 @@
 {
-  "version": "1.1.0",
-  "lastUpdated": "2025-08-27T20:00:00Z",
-  "minAppVersion": "2.0.0",
+  "version": "1.2.0",
+  "lastUpdated": "2025-01-29T10:00:00Z",
+  "updateAvailable": true,
+  "newContent": {
+    "title": {
+      "de": "Neue Freizeitpark-Edition verfügbar!",
+      "en": "New Theme Park Edition available!"
+    },
+    "description": {
+      "de": "Besuche Deutschlands beste Freizeitparks!",
+      "en": "Visit Germany's best theme parks!"
+    },
+    "icon": "🎢"
+  },
   "contentPacks": {
     "winter_special_2025": {
       "id": "winter_special_2025",
@@ -9,16 +20,15 @@
         "de": "Winter-Special 2025",
         "en": "Winter Special 2025"
       },
-      "color": "#74b9ff",
       "icon": "❄️",
-      "type": "seasonal",
+      "color": "#74b9ff",
       "free": true,
-      "available": true,
-      "startDate": "2024-12-01",
-      "endDate": "2025-02-28",
+      "type": "seasonal",
+      "difficulty": 2,
       "unlockConditions": [
-        {"type": "season", "seasons": ["winter"]},
-        {"type": "date_range", "start": "2024-12-01", "end": "2025-02-28"}
+        {
+          "type": "always"
+        }
       ],
       "locations": [
         {
@@ -27,25 +37,15 @@
             "de": "Kölner Weihnachtsmarkt",
             "en": "Cologne Christmas Market"
           },
-          "flag": "🎄",
-          "type": {
-            "de": "Weihnachtsmarkt",
-            "en": "Christmas Market"
-          },
-          "bonus": 50
+          "flag": "🎄"
         },
         {
-          "id": "weihnachtsmarkt_nuernberg", 
+          "id": "weihnachtsmarkt_nuernberg",
           "name": {
             "de": "Nürnberger Christkindlmarkt",
             "en": "Nuremberg Christmas Market"
           },
-          "flag": "🎁",
-          "type": {
-            "de": "Weihnachtsmarkt",
-            "en": "Christmas Market"
-          },
-          "bonus": 75
+          "flag": "🎁"
         },
         {
           "id": "skigebiet_alpen",
@@ -53,12 +53,7 @@
             "de": "Alpen Skigebiet",
             "en": "Alpine Ski Resort"
           },
-          "flag": "⛷️",
-          "type": {
-            "de": "Skigebiet",
-            "en": "Ski Resort"
-          },
-          "bonus": 100
+          "flag": "⛷️"
         },
         {
           "id": "eislaufbahn_muenchen",
@@ -66,28 +61,136 @@
             "de": "Münchner Eislaufbahn",
             "en": "Munich Ice Rink"
           },
-          "flag": "⛸️",
-          "type": {
-            "de": "Eislaufbahn",
-            "en": "Ice Rink"
+          "flag": "⛸️"
+        }
+      ]
+    },
+    "freizeitparks_de": {
+      "id": "freizeitparks_de",
+      "name": {
+        "de": "Deutsche Freizeitparks",
+        "en": "German Theme Parks"
+      },
+      "icon": "🎢",
+      "color": "#ff6b6b",
+      "free": true,
+      "type": "entertainment",
+      "difficulty": 3,
+      "unlockConditions": [
+        {
+          "type": "score",
+          "score": 100
+        }
+      ],
+      "locations": [
+        {
+          "id": "europa_park",
+          "name": {
+            "de": "Europa-Park",
+            "en": "Europa-Park"
           },
+          "flag": "🎠",
+          "bonus": 50
+        },
+        {
+          "id": "phantasialand",
+          "name": {
+            "de": "Phantasialand",
+            "en": "Phantasialand"
+          },
+          "flag": "🐉",
+          "bonus": 40
+        },
+        {
+          "id": "heide_park",
+          "name": {
+            "de": "Heide Park",
+            "en": "Heide Park"
+          },
+          "flag": "🎪",
+          "bonus": 35
+        },
+        {
+          "id": "movie_park",
+          "name": {
+            "de": "Movie Park Germany",
+            "en": "Movie Park Germany"
+          },
+          "flag": "🎬",
           "bonus": 30
+        },
+        {
+          "id": "hansa_park",
+          "name": {
+            "de": "Hansa-Park",
+            "en": "Hansa-Park"
+          },
+          "flag": "⚓",
+          "bonus": 25
+        },
+        {
+          "id": "holiday_park",
+          "name": {
+            "de": "Holiday Park",
+            "en": "Holiday Park"
+          },
+          "flag": "🌻",
+          "bonus": 25
+        },
+        {
+          "id": "legoland",
+          "name": {
+            "de": "LEGOLAND Deutschland",
+            "en": "LEGOLAND Germany"
+          },
+          "flag": "🧱",
+          "bonus": 30
+        },
+        {
+          "id": "belantis",
+          "name": {
+            "de": "Belantis",
+            "en": "Belantis"
+          },
+          "flag": "🏰",
+          "bonus": 20
+        },
+        {
+          "id": "tripsdrill",
+          "name": {
+            "de": "Erlebnispark Tripsdrill",
+            "en": "Tripsdrill Theme Park"
+          },
+          "flag": "🌳",
+          "bonus": 25
+        },
+        {
+          "id": "fort_fun",
+          "name": {
+            "de": "Fort Fun Abenteuerland",
+            "en": "Fort Fun Adventure Land"
+          },
+          "flag": "🤠",
+          "bonus": 15
         }
       ]
     },
     "autobahn_edition": {
-      "id": "autobahn_edition", 
+      "id": "autobahn_edition",
       "name": {
         "de": "Autobahn-Edition",
         "en": "Highway Edition"
       },
-      "color": "#636e72",
       "icon": "🛣️",
-      "type": "transport",
+      "color": "#636e72",
       "free": true,
-      "available": true,
+      "type": "transport",
+      "difficulty": 1,
       "unlockConditions": [
-        {"type": "score", "score": 500}
+        {
+          "type": "time_since_install",
+          "days": 3
+        }
       ],
       "locations": [
         {
@@ -96,11 +199,7 @@
             "de": "Raststätte A1 Nord",
             "en": "A1 North Rest Stop"
           },
-          "flag": "🚗",
-          "type": {
-            "de": "Raststätte",
-            "en": "Rest Stop"
-          }
+          "flag": "🚗"
         },
         {
           "id": "raststaette_a3_sued",
@@ -108,11 +207,7 @@
             "de": "Raststätte A3 Süd",
             "en": "A3 South Rest Stop"
           },
-          "flag": "🚙",
-          "type": {
-            "de": "Raststätte",
-            "en": "Rest Stop"
-          }
+          "flag": "🚙"
         },
         {
           "id": "autohof_a7",
@@ -120,117 +215,25 @@
             "de": "Autohof A7",
             "en": "A7 Truck Stop"
           },
-          "flag": "🚚",
-          "type": {
-            "de": "Autohof",
-            "en": "Truck Stop"
-          }
-        }
-      ]
-    },
-    "premium_luxus": {
-      "id": "premium_luxus",
-      "name": {
-        "de": "Luxus-Edition",
-        "en": "Luxury Edition"
-      },
-      "color": "#fdcb6e",
-      "icon": "💎",
-      "type": "premium",
-      "free": false,
-      "price": 1.99,
-      "currency": "EUR",
-      "available": true,
-      "unlockConditions": [
-        {"type": "premium"}
-      ],
-      "locations": [
-        {
-          "id": "hotel_adlon",
-          "name": {
-            "de": "Hotel Adlon Berlin",
-            "en": "Hotel Adlon Berlin"
-          },
-          "flag": "🏨",
-          "type": {
-            "de": "Luxus-Hotel",
-            "en": "Luxury Hotel"
-          },
-          "bonus": 200
+          "flag": "🚚"
         },
         {
-          "id": "restaurant_michelin",
+          "id": "tankstelle_a9_ost",
           "name": {
-            "de": "Michelin-Stern Restaurant",
-            "en": "Michelin Star Restaurant"
+            "de": "Tankstelle A9 Ost",
+            "en": "A9 East Gas Station"
           },
-          "flag": "⭐",
-          "type": {
-            "de": "Gourmet-Restaurant",
-            "en": "Gourmet Restaurant"
+          "flag": "⛽"
+        },
+        {
+          "id": "rastplatz_a2_west",
+          "name": {
+            "de": "Rastplatz A2 West",
+            "en": "A2 West Rest Area"
           },
-          "bonus": 300
+          "flag": "🅿️"
         }
       ]
-    }
-  },
-  "achievements": {
-    "winter_warrior": {
-      "id": "winter_warrior",
-      "name": {
-        "de": "Winter-Krieger",
-        "en": "Winter Warrior"
-      },
-      "description": {
-        "de": "Besuche alle Winter-Locations",
-        "en": "Visit all winter locations"
-      },
-      "icon": "❄️",
-      "target": 4,
-      "type": "edition_complete",
-      "editionId": "winter_special_2025",
-      "reward": {
-        "points": 500,
-        "title": {
-          "de": "Schneekönig",
-          "en": "Snow King"
-        }
-      }
-    },
-    "highway_hero": {
-      "id": "highway_hero",
-      "name": {
-        "de": "Autobahn-Held",
-        "en": "Highway Hero"
-      },
-      "description": {
-        "de": "Nutze 5 Autobahn-Toiletten",
-        "en": "Use 5 highway toilets"
-      },
-      "icon": "🛣️",
-      "target": 5,
-      "type": "location_visits",
-      "editionId": "autobahn_edition"
-    }
-  },
-  "events": {
-    "christmas_marathon": {
-      "id": "christmas_marathon",
-      "name": {
-        "de": "Weihnachts-Marathon",
-        "en": "Christmas Marathon"
-      },
-      "description": {
-        "de": "Besuche 25 Toiletten bis zum 25. Dezember",
-        "en": "Visit 25 toilets until December 25th"
-      },
-      "startDate": "2024-12-01",
-      "endDate": "2024-12-25",
-      "target": 25,
-      "reward": {
-        "points": 1000,
-        "unlock": "santa_edition"
-      }
     }
   }
 }
