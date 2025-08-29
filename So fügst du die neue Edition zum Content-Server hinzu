@@ -1,0 +1,86 @@
+Ich erstelle dir zuerst ein leeres Template und dann eine fertige Edition für den Content-Server!Jetzt erstelle ich dir eine konkrete neue Edition - wie wäre es mit einer "Deutsche Freizeitparks" Edition?## 📝 So fügst du die neue Edition zum Content-Server hinzu:
+
+### 1. **Speichere die Edition-Datei**
+Speichere die "Deutsche Freizeitparks Edition" als `freizeitparks_de.json` im Repository:
+```
+klo-kollektor-contentsrv/
+└── api/
+    └── editions/
+        └── freizeitparks_de.json
+```
+
+### 2. **Aktualisiere die server-config.json**
+Füge die neue Edition zur `server-config.json` hinzu:
+
+```json
+{
+  "version": "2.2.0",
+  "lastUpdated": "2025-01-29T10:00:00Z",
+  "updateAvailable": true,
+  "newContent": {
+    "title": {
+      "de": "Neue Freizeitpark-Edition verfügbar!",
+      "en": "New Theme Park Edition available!"
+    },
+    "description": {
+      "de": "Besuche Deutschlands beste Freizeitparks!",
+      "en": "Visit Germany's best theme parks!"
+    },
+    "icon": "🎢"
+  },
+  "contentPacks": {
+    "entertainment_parks": {
+      "id": "entertainment_parks",
+      "name": {
+        "de": "Unterhaltungs-Paket",
+        "en": "Entertainment Package"
+      },
+      "type": "entertainment",
+      "free": true,
+      "available": true,
+      "editions": {
+        "freizeitparks_de": {
+          "id": "freizeitparks_de",
+          "file": "freizeitparks_de.json"
+        }
+      }
+    }
+    // ... andere Pakete
+  }
+}
+```
+
+### 3. **Commit und Push zu GitHub**
+```bash
+cd klo-kollektor-contentsrv
+git add api/editions/freizeitparks_de.json
+git add api/server-config.json
+git commit -m "Add German Theme Parks edition"
+git push
+```
+
+## 🎯 Unlock-Bedingungen erklärt:
+
+Im Template findest du verschiedene `unlockConditions` Typen:
+
+- **`"type": "always"`** - Immer verfügbar
+- **`"type": "score", "score": 100`** - Ab 100 Punkten
+- **`"type": "edition_complete", "editionId": "deutschland", "percentage": 50`** - 50% einer anderen Edition abgeschlossen
+- **`"type": "time_since_install", "days": 7`** - Nach 7 Tagen Spielzeit
+- **`"type": "age_min", "age": 16`** - Mindestalter 16
+- **`"type": "premium"`** - Nur für Premium-Nutzer
+- **`"type": "achievement", "achievementId": "xyz"`** - Nach Freischaltung eines bestimmten Erfolgs
+- **`"type": "season", "seasons": ["summer", "spring"]`** - Nur in bestimmten Jahreszeiten
+
+## 💡 Weitere Edition-Ideen:
+
+- **Deutsche Universitäten** 🎓
+- **Weihnachtsmärkte** 🎄
+- **Biergärten** 🍺
+- **Burgen & Schlösser** 🏰
+- **Flughäfen** ✈️
+- **Seen & Strände** 🏖️
+- **Museen** 🏛️
+- **Fußballstadien** ⚽
+
+Möchtest du noch eine weitere spezielle Edition erstellt haben?
