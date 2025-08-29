@@ -1,0 +1,404 @@
+{
+  "id": "freizeitparks_de",
+  "name": {
+    "de": "Deutsche Freizeitparks",
+    "en": "German Theme Parks",
+    "fr": "Parcs d'attractions allemands"
+  },
+  "description": {
+    "de": "Besuche die tollsten Freizeitparks Deutschlands!",
+    "en": "Visit Germany's greatest theme parks!",
+    "fr": "Visitez les meilleurs parcs d'attractions d'Allemagne!"
+  },
+  "icon": "🎢",
+  "color": "#ff6b6b",
+  "type": "entertainment",
+  "difficulty": 3,
+  "free": true,
+  "price": null,
+  "currency": "EUR",
+  "available": true,
+  "startDate": null,
+  "endDate": null,
+  "unlockConditions": [
+    {
+      "type": "score",
+      "score": 100
+    }
+  ],
+  "unlockMessage": {
+    "de": "Erreiche 100 Punkte zum Freischalten",
+    "en": "Reach 100 points to unlock",
+    "fr": "Atteignez 100 points pour débloquer"
+  },
+  "locations": [
+    {
+      "id": "europa_park",
+      "name": {
+        "de": "Europa-Park",
+        "en": "Europa-Park",
+        "fr": "Europa-Park"
+      },
+      "flag": "🎠",
+      "type": {
+        "de": "Großer Freizeitpark",
+        "en": "Major Theme Park",
+        "fr": "Grand parc d'attractions"
+      },
+      "description": {
+        "de": "Deutschlands größter Freizeitpark in Rust",
+        "en": "Germany's largest theme park in Rust",
+        "fr": "Le plus grand parc d'attractions d'Allemagne à Rust"
+      },
+      "bonus": 50,
+      "coordinates": {
+        "lat": 48.2660,
+        "lng": 7.7220
+      },
+      "metadata": {
+        "difficulty": 3,
+        "rarity": "epic",
+        "visitorsPerYear": 6000000
+      }
+    },
+    {
+      "id": "phantasialand",
+      "name": {
+        "de": "Phantasialand",
+        "en": "Phantasialand",
+        "fr": "Phantasialand"
+      },
+      "flag": "🐉",
+      "type": {
+        "de": "Themenpark",
+        "en": "Theme Park",
+        "fr": "Parc à thème"
+      },
+      "description": {
+        "de": "Fantastische Themenwelten in Brühl",
+        "en": "Fantastic themed worlds in Brühl",
+        "fr": "Mondes thématiques fantastiques à Brühl"
+      },
+      "bonus": 40,
+      "coordinates": {
+        "lat": 50.7989,
+        "lng": 6.8797
+      },
+      "metadata": {
+        "difficulty": 3,
+        "rarity": "rare",
+        "visitorsPerYear": 2000000
+      }
+    },
+    {
+      "id": "heide_park",
+      "name": {
+        "de": "Heide Park",
+        "en": "Heide Park",
+        "fr": "Heide Park"
+      },
+      "flag": "🎪",
+      "type": {
+        "de": "Freizeitpark",
+        "en": "Amusement Park",
+        "fr": "Parc d'attractions"
+      },
+      "description": {
+        "de": "Norddeutschlands größter Freizeitpark",
+        "en": "Northern Germany's largest amusement park",
+        "fr": "Le plus grand parc d'attractions du nord de l'Allemagne"
+      },
+      "bonus": 35,
+      "coordinates": {
+        "lat": 52.9878,
+        "lng": 9.8793
+      },
+      "metadata": {
+        "difficulty": 2,
+        "rarity": "rare"
+      }
+    },
+    {
+      "id": "movie_park",
+      "name": {
+        "de": "Movie Park Germany",
+        "en": "Movie Park Germany",
+        "fr": "Movie Park Germany"
+      },
+      "flag": "🎬",
+      "type": {
+        "de": "Filmpark",
+        "en": "Movie Theme Park",
+        "fr": "Parc à thème cinéma"
+      },
+      "description": {
+        "de": "Hollywood in Deutschland",
+        "en": "Hollywood in Germany",
+        "fr": "Hollywood en Allemagne"
+      },
+      "bonus": 30,
+      "coordinates": {
+        "lat": 51.6198,
+        "lng": 6.9736
+      },
+      "metadata": {
+        "difficulty": 2,
+        "rarity": "uncommon"
+      }
+    },
+    {
+      "id": "hansa_park",
+      "name": {
+        "de": "Hansa-Park",
+        "en": "Hansa-Park",
+        "fr": "Hansa-Park"
+      },
+      "flag": "⚓",
+      "type": {
+        "de": "Freizeitpark an der Ostsee",
+        "en": "Baltic Sea Theme Park",
+        "fr": "Parc d'attractions de la mer Baltique"
+      },
+      "description": {
+        "de": "Deutschlands einziger Erlebnispark am Meer",
+        "en": "Germany's only seaside theme park",
+        "fr": "Le seul parc d'attractions en bord de mer d'Allemagne"
+      },
+      "bonus": 25,
+      "coordinates": {
+        "lat": 54.0764,
+        "lng": 10.7787
+      },
+      "metadata": {
+        "difficulty": 2,
+        "rarity": "uncommon"
+      }
+    },
+    {
+      "id": "holiday_park",
+      "name": {
+        "de": "Holiday Park",
+        "en": "Holiday Park",
+        "fr": "Holiday Park"
+      },
+      "flag": "🌻",
+      "type": {
+        "de": "Freizeitpark Pfalz",
+        "en": "Palatinate Theme Park",
+        "fr": "Parc du Palatinat"
+      },
+      "description": {
+        "de": "Expedition GeForce und mehr in Haßloch",
+        "en": "Expedition GeForce and more in Haßloch",
+        "fr": "Expedition GeForce et plus à Haßloch"
+      },
+      "bonus": 25,
+      "coordinates": {
+        "lat": 49.3173,
+        "lng": 8.2967
+      },
+      "metadata": {
+        "difficulty": 2,
+        "rarity": "uncommon"
+      }
+    },
+    {
+      "id": "legoland",
+      "name": {
+        "de": "LEGOLAND Deutschland",
+        "en": "LEGOLAND Germany",
+        "fr": "LEGOLAND Allemagne"
+      },
+      "flag": "🧱",
+      "type": {
+        "de": "LEGO-Themenpark",
+        "en": "LEGO Theme Park",
+        "fr": "Parc à thème LEGO"
+      },
+      "description": {
+        "de": "Die bunte LEGO-Welt in Günzburg",
+        "en": "The colorful LEGO world in Günzburg",
+        "fr": "Le monde coloré de LEGO à Günzburg"
+      },
+      "bonus": 30,
+      "coordinates": {
+        "lat": 48.4244,
+        "lng": 10.2997
+      },
+      "metadata": {
+        "difficulty": 2,
+        "rarity": "uncommon",
+        "targetAge": "families"
+      }
+    },
+    {
+      "id": "belantis",
+      "name": {
+        "de": "Belantis",
+        "en": "Belantis",
+        "fr": "Belantis"
+      },
+      "flag": "🏰",
+      "type": {
+        "de": "Abenteuerpark",
+        "en": "Adventure Park",
+        "fr": "Parc d'aventure"
+      },
+      "description": {
+        "de": "Das AbenteuerReich bei Leipzig",
+        "en": "The Adventure Kingdom near Leipzig",
+        "fr": "Le royaume de l'aventure près de Leipzig"
+      },
+      "bonus": 20,
+      "coordinates": {
+        "lat": 51.2477,
+        "lng": 12.3165
+      },
+      "metadata": {
+        "difficulty": 1,
+        "rarity": "common"
+      }
+    },
+    {
+      "id": "tripsdrill",
+      "name": {
+        "de": "Erlebnispark Tripsdrill",
+        "en": "Tripsdrill Theme Park",
+        "fr": "Parc Tripsdrill"
+      },
+      "flag": "🌳",
+      "type": {
+        "de": "Erlebnispark",
+        "en": "Adventure Park",
+        "fr": "Parc d'aventure"
+      },
+      "description": {
+        "de": "Deutschlands ältester Freizeitpark",
+        "en": "Germany's oldest theme park",
+        "fr": "Le plus ancien parc d'attractions d'Allemagne"
+      },
+      "bonus": 25,
+      "coordinates": {
+        "lat": 49.0354,
+        "lng": 9.0528
+      },
+      "metadata": {
+        "difficulty": 2,
+        "rarity": "uncommon",
+        "founded": 1929
+      }
+    },
+    {
+      "id": "fort_fun",
+      "name": {
+        "de": "Fort Fun Abenteuerland",
+        "en": "Fort Fun Adventure Land",
+        "fr": "Fort Fun Terre d'Aventure"
+      },
+      "flag": "🤠",
+      "type": {
+        "de": "Western-Freizeitpark",
+        "en": "Western Theme Park",
+        "fr": "Parc Western"
+      },
+      "description": {
+        "de": "Wildwest-Abenteuer im Sauerland",
+        "en": "Wild West adventures in Sauerland",
+        "fr": "Aventures du Far West dans le Sauerland"
+      },
+      "bonus": 15,
+      "coordinates": {
+        "lat": 51.3194,
+        "lng": 8.6861
+      },
+      "metadata": {
+        "difficulty": 1,
+        "rarity": "common"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achterbahn_fan",
+      "name": {
+        "de": "Achterbahn-Fan",
+        "en": "Roller Coaster Fan",
+        "fr": "Fan de montagnes russes"
+      },
+      "description": {
+        "de": "Besuche 3 verschiedene Freizeitparks",
+        "en": "Visit 3 different theme parks",
+        "fr": "Visitez 3 parcs d'attractions différents"
+      },
+      "icon": "🎢",
+      "target": 3,
+      "type": "location_visits",
+      "reward": {
+        "points": 200,
+        "title": {
+          "de": "Thrill-Seeker",
+          "en": "Thrill-Seeker",
+          "fr": "Chasseur de sensations"
+        }
+      }
+    },
+    {
+      "id": "park_hopper",
+      "name": {
+        "de": "Park-Hopper",
+        "en": "Park Hopper",
+        "fr": "Sauteur de parcs"
+      },
+      "description": {
+        "de": "Besuche alle 10 Freizeitparks",
+        "en": "Visit all 10 theme parks",
+        "fr": "Visitez les 10 parcs d'attractions"
+      },
+      "icon": "🏆",
+      "target": 10,
+      "type": "edition_complete",
+      "reward": {
+        "points": 500,
+        "title": {
+          "de": "Freizeitpark-Meister",
+          "en": "Theme Park Master",
+          "fr": "Maître des parcs"
+        }
+      }
+    },
+    {
+      "id": "big_three",
+      "name": {
+        "de": "Die großen Drei",
+        "en": "The Big Three",
+        "fr": "Les trois grands"
+      },
+      "description": {
+        "de": "Besuche Europa-Park, Phantasialand und Heide Park",
+        "en": "Visit Europa-Park, Phantasialand and Heide Park",
+        "fr": "Visitez Europa-Park, Phantasialand et Heide Park"
+      },
+      "icon": "⭐",
+      "target": 3,
+      "type": "specific_locations",
+      "locationIds": ["europa_park", "phantasialand", "heide_park"],
+      "reward": {
+        "points": 300,
+        "title": {
+          "de": "Premium Parker",
+          "en": "Premium Parker",
+          "fr": "Parker Premium"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "author": "Klo-Kollektor Team",
+    "createdAt": "2025-01-29T10:00:00Z",
+    "updatedAt": "2025-01-29T10:00:00Z",
+    "tags": ["freizeit", "entertainment", "parks", "family"],
+    "category": "entertainment",
+    "region": "germany"
+  }
+}
