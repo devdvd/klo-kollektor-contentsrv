@@ -1,25 +1,47 @@
 {
-  "version": "1.1.0",
-  "buildTime": "2025-08-27T20:00:00Z",
-  "buildNumber": 2508272000,
-  "lastUpdate": "2025-08-27T20:00:00Z",
+  "version": "1.2.0",
+  "buildTime": "2025-01-29T10:00:00Z",
+  "buildNumber": 2501291000,
+  "lastUpdate": "2025-01-29T10:00:00Z",
   "releaseNotes": {
     "de": [
-      "🎄 Winter-Special 2025 hinzugefügt",
-      "🛣️ Neue Autobahn-Edition verfügbar", 
-      "💎 Premium Luxus-Editionen erweitert",
-      "🏆 Neue Erfolge und Events",
-      "🔧 Performance-Verbesserungen"
+      "🎢 NEU: Deutsche Freizeitparks Edition",
+      "🎄 Winter-Special 2025 erweitert",
+      "🛣️ Autobahn-Edition verfügbar", 
+      "💎 Premium Luxus-Editionen",
+      "🏆 3 neue Freizeitpark-Erfolge",
+      "🔧 Content-Server Optimierungen"
     ],
     "en": [
-      "🎄 Winter Special 2025 added",
-      "🛣️ New Highway Edition available",
-      "💎 Premium Luxury Editions expanded", 
-      "🏆 New achievements and events",
-      "🔧 Performance improvements"
+      "🎢 NEW: German Theme Parks Edition",
+      "🎄 Winter Special 2025 expanded",
+      "🛣️ Highway Edition available",
+      "💎 Premium Luxury Editions", 
+      "🏆 3 new theme park achievements",
+      "🔧 Content server optimizations"
     ]
   },
   "changelog": {
+    "1.2.0": {
+      "date": "2025-01-29",
+      "type": "minor",
+      "changes": {
+        "de": [
+          "Neue Freizeitpark-Edition mit 10 deutschen Parks",
+          "Europa-Park, Phantasialand, Heide Park und mehr",
+          "3 neue Erfolge: Achterbahn-Fan, Park-Hopper, Die großen Drei",
+          "Bonus-Punkte für besondere Parks",
+          "Verbesserte Content-Server Integration"
+        ],
+        "en": [
+          "New Theme Parks Edition with 10 German parks",
+          "Europa-Park, Phantasialand, Heide Park and more",
+          "3 new achievements: Roller Coaster Fan, Park Hopper, The Big Three",
+          "Bonus points for special parks",
+          "Improved content server integration"
+        ]
+      }
+    },
     "1.1.0": {
       "date": "2025-08-27",
       "type": "minor",
@@ -60,20 +82,20 @@
     }
   },
   "statistics": {
-    "totalContentPacks": 3,
-    "totalLocations": 11,
-    "totalAchievements": 2,
+    "totalContentPacks": 4,
+    "totalLocations": 26,
+    "totalAchievements": 5,
     "totalEvents": 1
   },
   "updateInfo": {
     "critical": false,
     "forceUpdate": false,
-    "downloadSize": "~2KB",
+    "downloadSize": "~3KB",
     "updateType": "content"
   },
   "metadata": {
     "serverVersion": "2.1.0",
-    "contentHash": "sha256:abc123def456...",
+    "contentHash": "sha256:def789ghi012...",
     "regions": ["de", "at", "ch"],
     "languages": ["de", "en"],
     "platforms": ["web", "android", "ios"]
