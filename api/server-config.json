@@ -1,79 +1,15 @@
 {
-  "version": "1.1.0",
-  "lastUpdated": "2025-08-27T20:00:00Z",
+  "version": "1.2.0",
   "serverInfo": {
     "name": "Klo-Kollektor Content Server",
     "description": "GitHub Pages Content Delivery",
-    "maintainer": "David Kirsch",
-    "status": "online"
-  },
-  "settings": {
-    "updateFrequency": 86400000,
-    "cacheTime": 3600000,
-    "fallbackEnabled": true,
-    "compressionEnabled": true,
-    "maxRetries": 3,
-    "timeoutMs": 10000
-  },
-  "endpoints": {
-    "contentPacks": "/api/content-packs.json",
-    "serverConfig": "/api/server-config.json", 
-    "version": "/api/version.json"
+    "status": "online",
+    "lastUpdate": "2025-01-29T10:00:00Z"
   },
   "features": {
     "seasonalContent": true,
     "premiumContent": true,
-    "userEvents": true,
-    "dynamicUnlocks": true,
-    "crossPlatformSync": false
+    "entertainmentContent": true
   },
-  "compatibility": {
-    "minAppVersion": "2.0.0",
-    "supportedAppVersions": ["2.0.0", "2.1.0", "2.2.0"],
-    "platforms": ["web", "android", "ios"],
-    "browsers": ["chrome", "firefox", "safari", "edge"]
-  },
-  "cdn": {
-    "enabled": true,
-    "provider": "GitHub Pages",
-    "regions": ["global"],
-    "cacheTtl": 3600
-  },
-  "security": {
-    "cors": true,
-    "https": true,
-    "rateLimit": {
-      "enabled": false,
-      "requestsPerMinute": 60
-    }
-  },
-  "analytics": {
-    "enabled": false,
-    "trackUpdates": false,
-    "trackErrors": false
-  },
-  "notifications": {
-    "updateAvailable": {
-      "title": {
-        "de": "Neue Inhalte verfügbar!",
-        "en": "New content available!"
-      },
-      "message": {
-        "de": "Neue Editionen und Features wurden heruntergeladen.",
-        "en": "New editions and features have been downloaded."
-      },
-      "icon": "🆕"
-    },
-    "seasonalContent": {
-      "title": {
-        "de": "Saisonale Inhalte!",
-        "en": "Seasonal content!"
-      },
-      "message": {
-        "de": "Limitierte Winter-Edition jetzt verfügbar!",
-        "en": "Limited winter edition now available!"
-      },
-      "icon": "❄️"
-    }
-  }
+  "availableEditions": 3
 }
